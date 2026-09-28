@@ -414,6 +414,9 @@ end //
 
 delimiter ;
 
+
+-- 2.5 trigger
+
 delimiter //
 
 create trigger verifica_idade_animal
