@@ -141,7 +141,6 @@ Quando um trigger bloqueia uma operação, o DBeaver mostra a mensagem de erro d
 ## Observações
 
 - Os triggers são criados no final do script, depois dos inserts e updates. Por isso, os dados de exemplo não passam pela validação deles.
-- O trigger de idade só age em inserções. Um `UPDATE` que coloque uma idade negativa ainda seria aceito.
 - Os campos `cpf` e `telefone` são texto simples, sem validação de formato.
 
 ## Ideias para evoluir o projeto
