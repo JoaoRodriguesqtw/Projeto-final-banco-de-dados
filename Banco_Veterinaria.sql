@@ -414,6 +414,20 @@ end //
 
 delimiter ;
 
+delimiter //
+
+create trigger verifica_idade_animal
+before update on animais
+for each row
+begin
+	if (new.idade < 0 ) then
+		SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Erro: A idade não pode ser inferior a 0.';
+	end if;
+end //
+
+delimiter ;
+
 -- teste
 
 -- insert into animais (nome, idade, especie, raca, idclientes)
